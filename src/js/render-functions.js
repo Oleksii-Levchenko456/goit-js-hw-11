@@ -20,11 +20,11 @@ export function createGallery(images) {
   </li>
   <li class="stat-item">
     <span>Comments</span>
-    <span>${downloads}</span>
+    <span>${comments}</span>
   </li>
   <li class="stat-item">
     <span>Downloads</span>
-    <span>${comments}</span>
+    <span>${downloads}</span>
   </li>
 </ul>
     </a>
