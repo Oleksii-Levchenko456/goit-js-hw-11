@@ -8,11 +8,22 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-import { getImagesByQuery } from "./js/pixabay-api";
-import { createGallery } from "./js/render-functions";
+// import { getImagesByQuery } from "./js/pixabay-api";
+// import { createGallery } from "./js/render-functions";
+// import { showLoader } from "./js/render-functions";
+// import { hideLoader } from "./js/render-functions";
 
 const form = document.querySelector('.form')
 const searchText = document.querySelector('[name="search-text"]')
+
+document.addEventListener('DOMContentLoaded', () => {
+  showLoader()
+});
+window.addEventListener('load', () => {
+  hideLoader()
+});
+
+
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
