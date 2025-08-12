@@ -44,14 +44,10 @@ export function createGallery(images) {
 }
 
 export function showLoader(){
-  const loader = document.getElementById('loader');
-if(loader){
-    loader.style.display = 'inline-block'
-}
-
+  const loader = document.querySelector('.loader');
+  loader.classList.remove('is-not-active')
 }
 export function hideLoader(){
-const loader = document.getElementById('loader');
-if(loader){
-loader.style.display = 'none'}
+const loader = document.querySelector('.loader');
+loader.classList.add('is-not-active')
 }

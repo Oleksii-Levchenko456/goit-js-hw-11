@@ -35,12 +35,8 @@ form.addEventListener('submit', (e)=>{
             })  
           return
         }
-        
-
     clearGallery()
     showLoader()
-
-
     getImagesByQuery(searchText.value.trim()).then(images => {
         if (images.length === 0){
             iziToast.error({
