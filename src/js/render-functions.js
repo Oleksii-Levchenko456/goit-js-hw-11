@@ -45,9 +45,18 @@ export function createGallery(images) {
 
 export function showLoader(){
   const loader = document.querySelector('.loader');
-  loader.classList.remove('is-not-active')
+  if (loader) {
+    loader.classList.remove('is-not-active');
+  } else {
+    console.warn('Loader element not found');
+  }
 }
+
 export function hideLoader(){
-const loader = document.querySelector('.loader');
-loader.classList.add('is-not-active')
+  const loader = document.querySelector('.loader');
+  if (loader) {
+    loader.classList.add('is-not-active');
+  } else {
+    console.warn('Loader element not found in hideLoader');
+  }
 }
